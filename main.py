@@ -16,13 +16,16 @@ ARSHAD = Client(
 
 @ARSHAD.on_message(filters.command("start"))
 async def start_cmd(client, message): 
-    print("✨ Hey I am Just a Test Bot")
+    await message.reply_text("✨ Hey I am Just a Test Bot")
 
 
 @ARSHAD.on_message(filters.command("help"))
-async def help_cmd(client, message):
-    print("My owner Was Testing.Currently I have Yet feature 📝")    
+async def help_cmd(client, message):    
+    await message.reply_text("My owner Was Testing.Currently I have Yet feature 📝")
 
+@ARSHAS.on_message(filters.command("about"))
+async def about_cmd(client, message):
+    await message.reply_text("Still Online")
 
 
 
