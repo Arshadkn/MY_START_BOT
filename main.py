@@ -14,6 +14,18 @@ ARSHAD = Client(
 )
 
 
+@ARSHAD.on_message(filters.command("start"))
+async def start_cmd(client, message): 
+    print("✨ Hey I am Just a Test Bot")
+
+
+@ARSHAD.on_message(filters.command("help"))
+async def help_cmd(client, message):
+    print("My owner Was Testing.Currently I have Yet feature 📝")    
+
+
+
+
 print("I Am STARTING")
 
 
