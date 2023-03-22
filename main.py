@@ -23,7 +23,7 @@ async def start_cmd(client, message):
 async def help_cmd(client, message):    
     await message.reply_text("My owner Was Testing.Currently I have Yet feature 📝")
 
-@ARSHAS.on_message(filters.command("about"))
+@ARSHAD.on_message(filters.command("about"))
 async def about_cmd(client, message):
     await message.reply_text("Still Online")
 
