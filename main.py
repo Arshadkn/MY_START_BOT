@@ -1,5 +1,5 @@
 from pyrogram import Client, filters 
-from pyrogram.types 
+from pyrogram.types import InlineKeyboardmlMarkup, InlineKeyboardButton 
 
 API_ID = "11266671"
 API_HASH = "e46ba5c5399e3407a1d973cb93aaeabd"
@@ -13,15 +13,20 @@ ARSHAD = Client(
     bot_token=BOT_TOKEN
 )
 
-
+START_BUTTONS = [[
+  InlineKeyboardButton("Movie 🍿", url="https://t.me/Dcenimaunverse"),
+  InlineKeyboardButton("Owner📝", url="https://t.me/Arskottu")
+  ]]
+ 
 
 @ARSHAD.on_message(filters.command("start"))
 async def start_cmd(client, message): 
     await message.reply_photo(
         photo="https://graph.org/file/53d924ff5cc0f02050140.jpg",
-        caption=("✨ Hey I am Just a Test Bot")
-
-
+        caption=("✨ Hey I am Just a Test Bot" )
+        reply_markup=InlineKeyboardMarkup(START_BUTTONS)
+    )
+        
 @ARSHAD.on_message(filters.command("help"))
 async def help_cmd(client, message):    
     await message.reply_photo(
