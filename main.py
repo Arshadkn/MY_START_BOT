@@ -1,5 +1,5 @@
 from pyrogram import Client, filters 
-
+from pyrogram.types 
 
 API_ID = "11266671"
 API_HASH = "e46ba5c5399e3407a1d973cb93aaeabd"
